@@ -1,0 +1,175 @@
+/* Main Section Container */
+.videosSection {
+  padding: 80px 40px;
+  background-color: #fcfcfc;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 60px;
+}
+
+/* Horizontal Scroll Container */
+.scrollContainer {
+  display: flex;
+  overflow-x: auto;
+  gap: 30px;
+  padding-bottom: 30px;
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  scrollbar-width: thin; /* For Firefox */
+}
+
+/* Hide scrollbar for Chrome/Safari if needed */
+.scrollContainer::-webkit-scrollbar {
+  height: 6px;
+}
+.scrollContainer::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+/* Wrapper for Card Width */
+.videoCardWrapper {
+  flex: 0 0 350px;
+  max-width: 350px;
+}
+
+/* Main Video Card */
+.videoCard {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  background-color: #000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect on Card */
+.videoCard.active {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.videoWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.videoPlayer {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Overlay (Fades out on hover) */
+.videoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease;
+  z-index: 5;
+}
+
+.playIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease;
+}
+
+/* Video Info Container */
+.videoInfo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 20px;
+  text-align: left;
+  z-index: 10; /* Always above video */
+  transition: background 0.3s ease;
+}
+
+/* Default White Text with Shadow */
+.videoTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  transition: color 0.3s ease;
+}
+
+.videoSubtitle {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  transition: color 0.3s ease;
+}
+
+/* --- HOVER EFFECTS (The Fix) --- */
+
+/* 1. Play button and Dark Overlay hide hote hain */
+.videoCard.active .videoOverlay {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* 2. Text Black ho jata hai hover par */
+.videoCard.active .videoTitle {
+  color: #000000;
+  text-shadow: none; /* Black text par shadow ki zarurat nahi */
+}
+
+.videoCard.active .videoSubtitle {
+  color: #333333;
+  text-shadow: none;
+}
+
+/* Optional: Hover par niche thoda light gradient 
+   taaki agar video dark ho toh black text dikhe */
+.videoCard.active .videoInfo {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  .videoCardWrapper {
+    flex: 0 0 280px;
+    max-width: 280px;
+  }
+  .videosSection {
+    padding: 60px 20px;
+  }
+}

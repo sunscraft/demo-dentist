@@ -1,0 +1,315 @@
+.aboutPage {
+  background-color: #fbf9f8;
+  color: #1b1c1c;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Emergency Banner */
+.emergencyBanner {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #ea580c, #ef4444);
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  gap: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.bannerButton {
+  background: white;
+  color: #dc2626;
+  border: none;
+  padding: 4px 15px;
+  border-radius: 20px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+/* Navigation */
+.nav {
+  position: fixed;
+  top: 40px;
+  width: 100%;
+  z-index: 90;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #101c2e;
+}
+
+.navLinks {
+  display: flex;
+  gap: 30px;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.navLinks a:hover, .activeLink {
+  color: #00658b !important;
+}
+
+.bookBtn {
+  background: #000;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(16, 28, 46, 0.6);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.heroContent h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+/* Profile Section */
+.profileSection {
+  padding: 100px 8%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.imageWrapper {
+  flex: 1;
+  position: relative;
+}
+
+.mainImg {
+  border-radius: 20px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.experienceBadge {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.badgeNum {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #735c00;
+}
+
+.infoContent {
+  flex: 1;
+}
+
+.tag {
+  color: #00658b;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.infoContent h2 {
+  font-size: 3rem;
+  color: #101c2e;
+  margin: 20px 0;
+  line-height: 1.2;
+}
+
+/* Timeline */
+.timelineSection {
+  background: #f6f3f2;
+  padding: 100px 8%;
+}
+
+.timelineItem {
+  display: flex;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timelineDate {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #00658b;
+  min-width: 100px;
+}
+
+.timelineText {
+  padding-left: 30px;
+  border-left: 2px solid #00658b;
+  color: #45474c;
+}
+
+/* WhatsApp */
+.whatsappFloat {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+}
+
+@media (max-width: 768px) {
+  .profileSection { flex-direction: column; }
+  .heroContent h1 { font-size: 2.5rem; }
+  .navLinks { display: none; }
+}
+.teamSection {
+  padding: 100px 5%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.teamHeader h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.teamHeader p {
+  color: #666;
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.teamMember {
+  text-align: left; /* Image ke hisaab se left align text */
+}
+
+.memberImageWrapper {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+.memberImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%); /* Image ko Black & White banane ke liye */
+  transition: filter 0.3s ease;
+}
+
+/* Hover par color wapas laane ke liye (Optional) */
+.teamMember:hover .memberImg {
+  filter: grayscale(0%);
+}
+
+.memberName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+}
+
+.memberRole {
+  font-size: 0.9rem;
+  color: #0070f3; /* Aapka theme blue color */
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+.floatingWhatsApp {
+  position: fixed;      /* Screen par ek jagah fix rakhta hai */
+  bottom: 30px;         /* Niche se distance */
+  right: 30px;          /* Right side se distance */
+  background-color: #25d366; /* WhatsApp Green */
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 9999;        /* Sabse upar dikhne ke liye */
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.floatingWhatsApp:hover {
+  transform: scale(1.1); /* Hover par thoda bada dikhega */
+  background-color: #128c7e;
+}

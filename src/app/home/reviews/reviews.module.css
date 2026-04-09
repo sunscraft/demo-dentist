@@ -1,0 +1,89 @@
+.reviewsSection {
+    padding: 60px 0;
+    background-color: #ffffff;
+    overflow: hidden;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+}
+
+.sliderContainer {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+/* Animation for the horizontal move */
+.track {
+    display: flex;
+    width: calc(350px * 8); /* Adjust based on card width + gap */
+    animation: scroll 30s linear infinite;
+}
+
+.track:hover {
+    animation-play-state: paused; /* Stops on hover */
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-350px * 4)); } 
+}
+
+.reviewCard {
+    width: 320px;
+    min-width: 320px;
+    margin: 0 15px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    border: 1px solid #f0f0f0;
+}
+
+.stars {
+    color: #FFD700; /* Gold color */
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.comment {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-style: italic;
+    min-height: 80px;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.userName {
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.userLocation {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 0;
+}

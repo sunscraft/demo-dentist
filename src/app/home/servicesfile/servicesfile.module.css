@@ -1,0 +1,131 @@
+.servicesSection {
+  padding: 80px 5%;
+  /* Pastel Skin/Beige Background */
+  background-color: #fdf5ed; 
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+  gap: 20px;
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  color: #0d2137;
+  font-weight: 800;
+}
+
+.subTitle {
+  color: #555;
+  font-size: 1.1rem;
+  max-width: 600px;
+}
+
+.viewAll {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Grid setup */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Base Card Style - White Cards on Pastel Bg */
+.card {
+  padding: 45px 35px;
+  border-radius: 24px;
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.03); /* Soft border */
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02); /* Very subtle shadow */
+}
+
+/* --- HOVER EFFECT: Dark Blue Fill --- */
+.card:hover {
+  background-color: #0d2137 !important; 
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(13, 33, 55, 0.2);
+  border-color: #0d2137;
+}
+
+/* Hover par text white */
+.card:hover .cardTitle {
+  color: #ffffff !important;
+}
+
+.card:hover .cardDescription {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Icon Container */
+.iconContainer {
+  width: 65px;
+  height: 65px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  transition: all 0.4s ease;
+}
+
+/* Hover par icon change */
+.card:hover .iconContainer {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  transform: scale(1.1) rotate(8deg);
+}
+
+.card:hover .icon {
+  color: #ffffff !important;
+}
+
+/* Typography */
+.cardTitle {
+  font-size: 1.5rem;
+  color: #0d2137;
+  margin-bottom: 15px;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  transition: color 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+  .header { flex-direction: column; align-items: flex-start; }
+  .mainTitle { font-size: 2rem; }
+}
