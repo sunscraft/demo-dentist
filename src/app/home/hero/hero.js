@@ -1,8 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './hero.module.css';
-import { FaWhatsapp } from 'react-icons/fa'; // WhatsApp icon ke liye
+import { FaWhatsapp } from 'react-icons/fa'; 
 import Link from 'next/link';
+
 const Hero = () => {
   // WhatsApp Configuration
   const phoneNumber = "917024934163"; 
@@ -12,12 +13,10 @@ const Hero = () => {
   return (
     <div className={styles.heroWrapper}>
       
-      
-
-      {/* 3. Main Content Area */}
+      {/* Main Content Area */}
       <div className={styles.contentArea}>
         <div className={styles.textContainer}>
-          <div className={styles.ratedBadge}>Noida's TOP RATED DENTAL CLINIC</div>
+          <div className={styles.ratedBadge}>NOIDA'S TOP RATED DENTAL CLINIC</div>
           <h1 className={styles.title}>
             Transform Your <span className={styles.smileUnderline}>Smile</span> With Expert Care
           </h1>
@@ -36,7 +35,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Image and Overlapping Modals */}
+        {/* Hero Image Section - Modals Removed */}
         <div className={styles.imageModalsContainer}>
           <div className={styles.imageBgCircle}></div>
           <div className={styles.dentistImageContainer}>
@@ -49,27 +48,10 @@ const Hero = () => {
                 priority 
             />
           </div>
-
-          {/* Overlapping Modals */}
-          <div className={`${styles.modal} ${styles.awardModal}`}>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.awardIcon}>
-              <path d="M10 1L12.55 6.55L18.5 7.15L13.8 11L15.3 17L10 13.8L4.7 17L6.2 11L1.5 7.15L7.45 6.55L10 1Z" fill="#D4AF37" stroke="#D4AF37" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M10 13L7 19.5L10 17.5L13 19.5L10 13Z" fill="#D4AF37"/>
-            </svg>
-            <span className={styles.modalText}>BEST DENTIST 2023</span>
-          </div>
-
-          <div className={`${styles.modal} ${styles.slotModal}`}>
-            <span className={styles.statusDot}></span>
-            <div>
-                <span className={styles.modalLabel}>NEXT AVAILABLE SLOT</span>
-                <span className={styles.modalTextMain}>Today, 3:00 PM</span>
-            </div>
-          </div>
         </div>
       </div>
 
-      {/* 4. Quick Booking Form Section */}
+      {/* Quick Booking Form Section */}
       <div className={styles.bookingBarContainer}>
         <div className={styles.bookingBar}>
           <div className={styles.bookingHeader}>
@@ -105,25 +87,25 @@ const Hero = () => {
             <div className={styles.inputGroup}>
               <label>TIME SLOT</label>
               <select>
-    <option>09:00 AM - 09:30 AM</option>
-    <option>09:30 AM - 10:00 AM</option>
-    <option>10:00 AM - 10:30 AM</option>
-    <option>10:30 AM - 11:00 AM</option>
-    <option>11:00 AM - 11:30 AM</option>
-    <option>11:30 AM - 12:00 PM</option>
-    <option>12:00 PM - 12:30 PM</option>
-    <option>12:30 PM - 01:00 PM</option>
-    <option>01:00 PM - 01:30 PM</option>
-    <option>01:30 PM - 02:00 PM</option>
-    <option>02:00 PM - 02:30 PM</option>
-    <option>02:30 PM - 03:00 PM</option>
-    <option>03:00 PM - 03:30 PM</option>
-    <option>03:30 PM - 04:00 PM</option>
-    <option>04:00 PM - 04:30 PM</option>
-    <option>04:30 PM - 05:00 PM</option>
-    <option>05:00 PM - 05:30 PM</option>
-    <option>05:30 PM - 06:00 PM</option>
-  </select>
+                <option>09:00 AM - 09:30 AM</option>
+                <option>09:30 AM - 10:00 AM</option>
+                <option>10:00 AM - 10:30 AM</option>
+                <option>10:30 AM - 11:00 AM</option>
+                <option>11:00 AM - 11:30 AM</option>
+                <option>11:30 AM - 12:00 PM</option>
+                <option>12:00 PM - 12:30 PM</option>
+                <option>12:30 PM - 01:00 PM</option>
+                <option>01:00 PM - 01:30 PM</option>
+                <option>01:30 PM - 02:00 PM</option>
+                <option>02:00 PM - 02:30 PM</option>
+                <option>02:30 PM - 03:00 PM</option>
+                <option>03:00 PM - 03:30 PM</option>
+                <option>03:30 PM - 04:00 PM</option>
+                <option>04:00 PM - 04:30 PM</option>
+                <option>04:30 PM - 05:00 PM</option>
+                <option>05:00 PM - 05:30 PM</option>
+                <option>05:30 PM - 06:00 PM</option>
+              </select>
             </div>
 
             <button className={styles.submitBookingBtn}>
@@ -133,7 +115,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* 5. Floating WhatsApp Icon */}
+      {/* Floating WhatsApp Icon */}
       <a 
         href={whatsappUrl} 
         target="_blank" 
