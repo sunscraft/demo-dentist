@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import styles from './about.module.css'; // CSS Module Import
 import { FaWhatsapp } from 'react-icons/fa';
 
@@ -23,7 +22,7 @@ const AboutPage = () => {
           <div className={styles.heroOverlay}></div>
           <div className={styles.heroContent}>
             <h1>About Dr. Priya Sharma</h1>
-            <p>Noida's Premier Destination for Dental Excellence</p>
+            <p>Noida&apos;s Premier Destination for Dental Excellence</p>
           </div>
         </section>
 

@@ -15,7 +15,7 @@ const reviewsData = [
         name: "Anjali Singh",
         location: "New Delhi",
         rating: 5,
-        comment: "The best dental experience I've ever had. The staff is very polite and the clinic is super clean. Highly recommended!",
+        comment: "The best dental experience I&apos;ve ever had. The staff is very polite and the clinic is super clean. Highly recommended!",
         image: "https://i.pravatar.cc/150?u=anjali"
     },
     {
@@ -49,7 +49,7 @@ const Reviews = () => {
                             <div className={styles.stars}>
                                 {"★".repeat(review.rating)}{"☆".repeat(5 - review.rating)}
                             </div>
-                            <p className={styles.comment}>"{review.comment}"</p>
+                            <p className={styles.comment}>&quot;{review.comment}&quot;</p>
                             <div className={styles.userInfo}>
                                 <img src={review.image} alt={review.name} className={styles.avatar} />
                                 <div>

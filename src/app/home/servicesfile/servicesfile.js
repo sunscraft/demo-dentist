@@ -5,7 +5,7 @@ import styles from './servicesfile.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const servicesData = [
+export const servicesData = [
   {
     title: 'Dental Checkup',
     description: 'Comprehensive screening including digital X-rays and deep scaling.',

@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './hero.module.css';
 import { FaWhatsapp } from 'react-icons/fa'; 
-import Link from 'next/link';
 
 const Hero = () => {
   // WhatsApp Configuration
@@ -16,7 +15,7 @@ const Hero = () => {
       {/* Main Content Area */}
       <div className={styles.contentArea}>
         <div className={styles.textContainer}>
-          <div className={styles.ratedBadge}>NOIDA'S TOP RATED DENTAL CLINIC</div>
+          <div className={styles.ratedBadge}>NOIDA&apos;S TOP RATED DENTAL CLINIC</div>
           <h1 className={styles.title}>
             Transform Your <span className={styles.smileUnderline}>Smile</span> With Expert Care
           </h1>

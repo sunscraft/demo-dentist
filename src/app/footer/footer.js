@@ -22,7 +22,7 @@ const Footer = () => {
           <div className={styles.brandCol}>
             <h2 className={styles.brandName}>Dr. Priya Sharma</h2>
             <p className={styles.brandDesc}>
-              Noida's premier dental clinic providing aesthetic and clinical excellence since 2008. Your comfort is our priority.
+              Noida&apos;s premier dental clinic providing aesthetic and clinical excellence since 2008. Your comfort is our priority.
             </p>
             <div className={styles.socialLinks}>
               <a href="#"><FaFacebookF /></a>

@@ -12,7 +12,7 @@ const Header = () => {
     <div className={styles.headerContainer}>
       {/* 1. Red Banner */}
       <div className={styles.banner}>
-        <span>DENTAL EMERGENCY? WE'RE HERE TO HELP</span>
+        <span>DENTAL EMERGENCY? WE&apos;RE HERE TO HELP</span>
         <a href={`tel:${phoneNumber}`} className={styles.bannerButton}>Call Now</a>
       </div>
 
